@@ -31,9 +31,6 @@ class list_node {
         this->pre = NULL;
         this->next = NULL;
     }
-
-
-    
 };
 
 void print_all( list_node* &head){
@@ -97,6 +94,7 @@ void Insert_At_Head(list_node* &head, list_node* &tail, list_node* &temp){
     return ;
 }
 
+
 void Insert_At_Tail(list_node* &head, list_node* &tail, list_node* &temp){    
     if(head == NULL){
         head = temp;
@@ -109,6 +107,7 @@ void Insert_At_Tail(list_node* &head, list_node* &tail, list_node* &temp){
     tail = temp;
     return ;
 }
+
 
 void Insert_after(list_node* &head, list_node* &tail, list_node* &temp, list_node* &insert){
     if( temp == tail ){
@@ -124,6 +123,8 @@ void Insert_after(list_node* &head, list_node* &tail, list_node* &temp, list_nod
         return ;
     }
 }
+
+
 void Insert_before(list_node* &head, list_node* &tail, list_node* &temp, list_node* &insert){
     if( temp == head){
         Insert_At_Head(head, tail, insert);
@@ -139,6 +140,7 @@ void Insert_before(list_node* &head, list_node* &tail, list_node* &temp, list_no
     }
 
 }
+
 
 void delete_node(list_node* &head, list_node* &tail, list_node* &temp ){
     if( temp == head && head == tail){
@@ -179,6 +181,7 @@ void delete_node(list_node* &head, list_node* &tail, list_node* &temp ){
 
 }
 
+
 list_node* give_node( list_node* &head, string ID ){
     if( head == NULL){
         cout<<"There are no entries available."<<endl;
@@ -196,6 +199,7 @@ list_node* give_node( list_node* &head, string ID ){
 
     return temp;
 }
+
 
 vector<list_node*> search_name( list_node* &head, string give_name){
     list_node* temp = head;
@@ -216,6 +220,8 @@ vector<list_node*> search_name( list_node* &head, string give_name){
 
     return ans;
 }
+
+
 vector<list_node*> search_qua(list_node* &head, string give_qua){
     list_node* temp = head;
 
@@ -236,7 +242,6 @@ vector<list_node*> search_qua(list_node* &head, string give_qua){
     return ans;
 }
 
-
 vector<list_node*> search_city(list_node* &head, string give_city){
     list_node* temp = head;
 
@@ -256,7 +261,6 @@ vector<list_node*> search_city(list_node* &head, string give_city){
 
     return ans;
 }
-
 
 vector<list_node*> search_date(list_node* &head, string give_date){
     list_node* temp = head;
@@ -298,6 +302,7 @@ vector<list_node*> search_jobtitle(list_node* &head, string give_jobtitle){
 
     return ans;
 }
+
 
 void update_record( list_node* &temp){
     char inp;
@@ -362,9 +367,6 @@ void update_record( list_node* &temp){
         temp->date = n;
     }
 }
-
-
-
 
 int main(){
 
@@ -486,10 +488,7 @@ int main(){
                     Insert_before(head, tail, temp2, temp);
                 }
                 continue;
-            }
-
-
-            
+            } 
     
         }
 
